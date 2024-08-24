@@ -1,2 +1,2 @@
 # workshop-fabrica-2024.2
-Boa tarde
+Projeto de django de Márcio Souto Maior Sousa
