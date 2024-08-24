@@ -32,8 +32,6 @@ def criar_personagem(request):
 
 
 def adicionar_jogador(request):
-    if not request.user.is_superuser:
-        return HttpResponseForbidden("Unauthorized") 
     if request.method == 'POST':
         formset = JogadorFormSet(request.POST)
         if formset.is_valid():
