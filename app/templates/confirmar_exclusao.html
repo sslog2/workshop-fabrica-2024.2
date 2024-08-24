@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
   <h2>Confirmar Exclusão</h2>
-  <p>Você tem certeza que deseja excluir o jogador "{{ jogador.nome }}"?</p>
+  <h2>Você tem certeza que deseja excluir o jogador "{{ jogador.nome }}"?</h2>
   <form method="POST">
     {% csrf_token %}
     <button type="submit">Confirmar Exclusão</button>
   </form>
+  <div class="nav-links">
   <a href="{% url 'lista_jogadores' %}">Cancelar</a>
+  </div>
 {% endblock %}
 

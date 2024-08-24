@@ -21,7 +21,10 @@
       <li>Não há jogadores cadastrados.</li>
     {% endfor %}
   </ul>
-  <a href="{% url 'adicionar_jogador' %}">Adicionar Jogador</a>
-  <span style="margin: 0 15px;">|</span>
-  <a href="{% url 'adicionar_personagem' %}">Adicionar Personagem</a>
+  <div class="nav-links">
+    <a href="{% url 'adicionar_jogador' %}">Adicionar Jogador</a>
+    <span></span>
+    <a href="{% url 'adicionar_personagem' %}">Adicionar Personagem</a>
+  </div>
 {% endblock %}
+

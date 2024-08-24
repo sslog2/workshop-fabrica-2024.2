@@ -1,13 +1,15 @@
 import requests
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponseForbidden
 from .models import Jogador, Personagem
 from .forms import PersonagemForm, JogadorFormSet
-from django.shortcuts import get_object_or_404
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
-from rest_framework_simplejwt.authentication import JWTAuthentication
 
+
+import requests
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponseForbidden
+from .models import Jogador, Personagem
+from .forms import PersonagemForm, JogadorFormSet
 
 def criar_personagem(request):
     response_classes = requests.get("https://www.dnd5eapi.co/api/classes/")
@@ -28,12 +30,15 @@ def criar_personagem(request):
 
     return render(request, 'adicionar_personagem.html', {'form': form})
 
+
 def adicionar_jogador(request):
+    if not request.user.is_superuser:
+        return HttpResponseForbidden("Unauthorized") 
     if request.method == 'POST':
         formset = JogadorFormSet(request.POST)
         if formset.is_valid():
             formset.save()
-            return redirect('lista_jogadores')  
+            return redirect('lista_jogadores')
     else:
         formset = JogadorFormSet(queryset=Jogador.objects.none())
 
@@ -48,7 +53,7 @@ def excluir_jogador(request, pk):
 
     if request.method == 'POST':
         jogador.delete()
-        return redirect('lista_jogadores') 
+        return redirect('lista_jogadores')
 
     return render(request, 'confirmar_exclusao.html', {'jogador': jogador})
 
@@ -58,11 +63,3 @@ def excluir_personagem(request, pk):
         personagem.delete()
         return redirect('lista_jogadores')
     return render(request, 'confirmar_exclusao.html', {'objeto': personagem, 'tipo': 'Personagem'})
-
-class Home(APIView):
-    authentication_classes = [JWTAuthentication]
-    permission_classes = [IsAuthenticated]
-
-    def get(self, request):
-        content = {'message': 'Hello, World!'}
-        return Response(content)

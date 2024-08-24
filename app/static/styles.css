@@ -1,0 +1,219 @@
+/* Estilos gerais para o formulário */
+form {
+    max-width: 100%; /* Ajuste para não ultrapassar o limite da tela */
+    width: 100%; /* Garantir que o formulário ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], select, button {
+    width: 100%; /* Garantir que os elementos ocupem toda a largura do formulário */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="button"].delete-form {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select, form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.delete-form {
+    color: red;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.delete-form:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+ul li ul {
+    padding-left: 20px;
+}
+
+ul li ul li {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+a + span {
+    margin: 0 15px;
+}
+
+.nav-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+span {
+    display: inline-block; /* Necessário para definir largura e altura */
+    width: 100px; /* Ajuste conforme necessário */
+    height: 30px; /* Ajuste conforme necessário */
+    background-color: #f4f4f4; /* Cor de fundo para visualização */
+    text-align: center; /* Alinhar o texto centralizado */
+    line-height: 30px; /* Alinhar o texto verticalmente */
+}
+
+span {
+    display: inline-block; /* Necessário para o espaçamento funcionar */
+    width: 20px; /* Ajuste conforme necessário */
+    margin: 0 10px; /* Espaçamento horizontal */
+}

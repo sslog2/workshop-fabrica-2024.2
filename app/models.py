@@ -15,4 +15,3 @@ class Personagem(models.Model):
 
     def __str__(self):
         return f"{self.nome} - Classe: {self.classe}, Nível: {self.nivel}"
-

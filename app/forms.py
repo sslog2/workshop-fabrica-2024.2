@@ -9,6 +9,10 @@ class JogadorForm(forms.ModelForm):
 
 JogadorFormSet = modelformset_factory(Jogador, form=JogadorForm)
 
+from django import forms
+from .models import Personagem, Jogador
+import json
+
 class PersonagemForm(forms.ModelForm):
     classe = forms.ChoiceField(choices=[])  
     raca = forms.ChoiceField(choices=[])
@@ -25,4 +29,3 @@ class PersonagemForm(forms.ModelForm):
         self.fields['classe'].choices = [(c['index'], c['name']) for c in classes]
         self.fields['raca'].choices = [(r['index'], r['name']) for r in racas]
         self.fields['jogador'].queryset = Jogador.objects.filter(id__in=[j.id for j in jogadores])
-

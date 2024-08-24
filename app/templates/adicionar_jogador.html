@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
   <h2>Adicionar Novo Jogador</h2>
   <form method="post">
     {% csrf_token %}
@@ -17,9 +18,12 @@
     </ul>
     <button type="submit">Salvar</button>
   </form>
-  <a href="{% url 'lista_jogadores' %}">Voltar para a Lista de Jogadores</a>
-  <span style="margin: 0 15px;">|</span>
-  <a href="{% url 'adicionar_personagem' %}">Adicionar Personagem</a>
+  <div class="nav-links">
+    <a href="{% url 'lista_jogadores' %}">Voltar para a Lista de Jogadores</a>
+    <span></span>
+    <a href="{% url 'adicionar_personagem' %}">Adicionar Personagem</a>
+  </div>
+  
 {% endblock %}
 
 

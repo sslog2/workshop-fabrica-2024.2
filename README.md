@@ -9,3 +9,8 @@ Projeto de django de Márcio Souto Maior Sousa
 ## Relação entidade
 - Jogador {1,n} ------> Personagem
 - Personagem {n,1} --------> Jogador
+
+## Tecnologias Utilizadas
+* [Python](https://www.python.org)
+* [Django REST framework](https://www.django-rest-framework.org)
+* [Git](https://git-scm.com)
