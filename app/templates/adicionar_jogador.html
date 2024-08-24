@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Adicionar Novo Jogador</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ formset.management_form }}
+    <ul>
+      {% for form in formset %}
+        <li>
+          {{ form.nome.label_tag }} {{ form.nome }}<br>
+          {{ form.email.label_tag }} {{ form.email }}<br>
+          {% if formset.total_form_count > 1 %}
+            <button type="button" class="delete-form">Excluir</button>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    <button type="submit">Salvar</button>
+  </form>
+  <a href="{% url 'lista_jogadores' %}">Voltar para a Lista de Jogadores</a>
+  <span style="margin: 0 15px;">|</span>
+  <a href="{% url 'adicionar_personagem' %}">Adicionar Personagem</a>
+{% endblock %}
+
+
