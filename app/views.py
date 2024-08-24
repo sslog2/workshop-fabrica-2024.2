@@ -62,4 +62,4 @@ def excluir_personagem(request, pk):
     if request.method == 'POST':
         personagem.delete()
         return redirect('lista_jogadores')
-    return render(request, 'confirmar_exclusao.html', {'objeto': personagem, 'tipo': 'Personagem'})
+    return render(request, 'confirmar_exclusao.html', {'personagem': personagem})
