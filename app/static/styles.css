@@ -1,8 +1,7 @@
-/* Estilos gerais para o formulário */
 form {
-    max-width: 100%; /* Ajuste para não ultrapassar o limite da tela */
-    width: 100%; /* Garantir que o formulário ocupe toda a largura disponível */
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    max-width: 100%; 
+    width: 100%; 
+    box-sizing: border-box; 
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -31,11 +30,11 @@ label {
 }
 
 input[type="text"], input[type="email"], select, button {
-    width: 100%; /* Garantir que os elementos ocupem toda a largura do formulário */
+    width: 100%;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    box-sizing: border-box; 
     margin-bottom: 10px;
 }
 
@@ -204,16 +203,16 @@ a:hover {
 }
 
 span {
-    display: inline-block; /* Necessário para definir largura e altura */
-    width: 100px; /* Ajuste conforme necessário */
-    height: 30px; /* Ajuste conforme necessário */
-    background-color: #f4f4f4; /* Cor de fundo para visualização */
-    text-align: center; /* Alinhar o texto centralizado */
-    line-height: 30px; /* Alinhar o texto verticalmente */
+    display: inline-block; 
+    width: 100px; 
+    height: 30px; 
+    background-color: #f4f4f4; 
+    text-align: center; 
+    line-height: 30px; 
 }
 
 span {
-    display: inline-block; /* Necessário para o espaçamento funcionar */
-    width: 20px; /* Ajuste conforme necessário */
-    margin: 0 10px; /* Espaçamento horizontal */
+    display: inline-block;
+    width: 20px;
+    margin: 0 10px; 
 }
