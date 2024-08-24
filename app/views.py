@@ -3,6 +3,10 @@ from django.shortcuts import render, redirect
 from .models import Jogador, Personagem
 from .forms import PersonagemForm, JogadorFormSet
 from django.shortcuts import get_object_or_404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
 
 
 def criar_personagem(request):
@@ -55,4 +59,10 @@ def excluir_personagem(request, pk):
         return redirect('lista_jogadores')
     return render(request, 'confirmar_exclusao.html', {'objeto': personagem, 'tipo': 'Personagem'})
 
+class Home(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
+    def get(self, request):
+        content = {'message': 'Hello, World!'}
+        return Response(content)
