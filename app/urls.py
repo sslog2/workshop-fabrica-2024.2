@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import criar_personagem, adicionar_jogador, lista_jogadores, lista_personagens, excluir_jogador, excluir_personagem
+from .views import criar_personagem, adicionar_jogador, lista_jogadores, excluir_jogador, excluir_personagem
 
 urlpatterns = [
     path('criar-personagem/', criar_personagem, name='adicionar_personagem'),

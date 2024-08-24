@@ -39,10 +39,6 @@ def lista_jogadores(request):
     jogadores = Jogador.objects.prefetch_related('personagens').all()
     return render(request, 'lista_jogador.html', {'jogadores': jogadores})
 
-def lista_personagens(request):
-    jogadores = Jogador.objects.prefetch_related('personagens').all()
-    return render(request, 'lista_personagem.html', {'jogadores': jogadores})
-
 def excluir_jogador(request, pk):
     jogador = get_object_or_404(Jogador, pk=pk)
 
@@ -56,7 +52,7 @@ def excluir_personagem(request, pk):
     personagem = get_object_or_404(Personagem, pk=pk)
     if request.method == 'POST':
         personagem.delete()
-        return redirect('lista_personagens')
+        return redirect('lista_jogadores')
     return render(request, 'confirmar_exclusao.html', {'objeto': personagem, 'tipo': 'Personagem'})
 
 
