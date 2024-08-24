@@ -18,7 +18,7 @@ def criar_personagem(request):
         form = PersonagemForm(request.POST, classes=classes, racas=racas, jogadores=jogadores)
         if form.is_valid():
             form.save()
-            return redirect('lista_personagens')
+            return redirect('lista_jogadores')
     else:
         form = PersonagemForm(classes=classes, racas=racas, jogadores=jogadores)
 
