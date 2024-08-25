@@ -6,13 +6,7 @@ class JogadorForm(forms.ModelForm):
     class Meta:
         model = Jogador
         fields = ['nome', 'email']
-
 JogadorFormSet = modelformset_factory(Jogador, form=JogadorForm)
-
-from django import forms
-from .models import Personagem, Jogador
-import json
-
 class PersonagemForm(forms.ModelForm):
     classe = forms.ChoiceField(choices=[])  
     raca = forms.ChoiceField(choices=[])

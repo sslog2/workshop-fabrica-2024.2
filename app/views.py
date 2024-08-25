@@ -4,13 +4,6 @@ from django.http import HttpResponseForbidden
 from .models import Jogador, Personagem
 from .forms import PersonagemForm, JogadorFormSet
 
-
-import requests
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponseForbidden
-from .models import Jogador, Personagem
-from .forms import PersonagemForm, JogadorFormSet
-
 def criar_personagem(request):
     response_classes = requests.get("https://www.dnd5eapi.co/api/classes/")
     classes = response_classes.json().get('results', [])
