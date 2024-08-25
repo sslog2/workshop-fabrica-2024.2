@@ -41,6 +41,5 @@ Projeto de django de Márcio Souto Maior Sousa
 ## Estrutura do Projeto
 
 - `manage.py`: Utilitário de linha de comando do Django.
-- `Dockerfile`: Utilitário de conteiner.
 - `project/`: Diretório do projeto Django.
 - `app/`: Diretório do aplicativo Django.
