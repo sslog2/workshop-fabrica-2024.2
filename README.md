@@ -12,7 +12,7 @@ Projeto de django de Márcio Souto Maior Sousa
 
 ## Tecnologias Utilizadas
 * [Python](https://www.python.org)
-* [Django REST framework](https://www.django-rest-framework.org)
+* [Django]([https://www.django](https://www.djangoproject.com/))
 * [Git](https://git-scm.com)
 
 ## Instalação
